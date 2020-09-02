@@ -2,7 +2,8 @@ name: aegisub
 #version: 'latest'
 adopt-info: aegisub
 summary: Aegisub is a free open-source cross-platform subtitle editing program
-description: |Aegisub is a free, cross-platform open source tool for creating and modifying subtitles. Aegisub makes it quick and easy to time subtitles to audio, and features many powerful tools for styling them, including a built-in real-time video preview.
+description: |
+   Aegisub is a free, cross-platform open source tool for creating and modifying subtitles. Aegisub makes it quick and easy to time subtitles to audio, and features many powerful tools for styling them, including a built-in real-time video preview.
   
 license: 	3-clause BSD License
 
