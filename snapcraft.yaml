@@ -1,51 +1,26 @@
-name: bashtop
+name: aegisub
 #version: 'latest'
-adopt-info: bashtop
-summary: Resource monitor for your terminal
-description: |
-  Resource monitor that shows usage and stats for processor, memory, disks, network and processes.
-    - Easy to use, with a game inspired menu system.
-    - Fast and "mostly" responsive UI with UP, DOWN keys process selection.
-    - Function for showing detailed stats for selected process.
-    - Ability to filter processes.
-    - Easy switching between sorting options.
-    - Send SIGTERM, SIGKILL, SIGINT to selected process.
-    - UI menu for changing all config file options.
-    - Auto scaling graph for network usage.
-    - Shows message in menu if new version is available
-    - Shows current read and write speeds for disks
-    - Multiple data collection methods which can be switched if running on Linux
+adopt-info: aegisub
+summary: Aegisub is a free open-source cross-platform subtitle editing program
+description: |Aegisub is a free, cross-platform open source tool for creating and modifying subtitles. Aegisub makes it quick and easy to time subtitles to audio, and features many powerful tools for styling them, including a built-in real-time video preview.
   
-  Once installed, run the following commands to improve functionality:
-    sudo snap connect bashtop:mount-observe
-    sudo snap connect bashtop:network-control
-    sudo snap connect bashtop:hardware-observe
-    sudo snap connect bashtop:system-observe
-    sudo snap connect bashtop:process-control
-  
-license: Apache-2.0
+license: 	3-clause BSD License
 
-base: core18
-grade: stable
+base: core16
+grade: edge
 confinement: strict
 
 apps:
-  bashtop:
-    command: bashtop
+  aegisub:
+    command: aegisub  
     environment:
       LC_ALL: C.UTF-8
     plugs:
-      - mount-observe
-      - network-control
-      - process-control
-      - system-observe
-      - hardware-observe
-      - network
       - home
       
 parts:
   bashtop:
-    source: https://github.com/aristocratos/bashtop
+    source: https://github.com/aegisub/aegisub  
     source-type: git
     plugin: make
     override-pull: |
