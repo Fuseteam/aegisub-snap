@@ -8,7 +8,7 @@ description: |
 license: 	3-clause BSD License
 
 base: core16
-grade: edge
+grade: devel
 confinement: strict
 
 apps:
